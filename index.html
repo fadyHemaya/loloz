@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sudanese Mothers' Conference</title>
+  <title>Team Points Tracker</title>
   <style>
     :root {
       --red: #ff5a5f;
@@ -422,7 +422,7 @@
 </head>
 <body>
   <header>
-    <h1>Sudanese Mothers' Conference</h1>
+    <h1>Team Points Tracker</h1>
   </header>
 
   <div class="container">
@@ -453,7 +453,7 @@
   <div class="confetti-container" id="confetti-container"></div>
 
   <footer>
-    <p>Sudanese Mothers' Conference | 23 May</p>
+    <p>Team Points Tracker | Made with ❤️</p>
   </footer>
 
   <script>
@@ -809,12 +809,20 @@
       
       // Reset all scores
       resetButton.addEventListener('click', () => {
+        // Reset points in localStorage
         teamData.forEach(team => {
           savePoints(team.id, '0');
         });
         
+        // Update the DOM
         const cards = document.querySelectorAll('.team-card');
         cards.forEach(card => {
+          // Set points to 0
+          const pointsElement = card.querySelector('.points');
+          pointsElement.textContent = '0';
+          pointsElement.dataset.points = '0';
+          
+          // Add animation
           card.style.animation = 'celebrate 1s';
           setTimeout(() => {
             card.style.animation = '';
