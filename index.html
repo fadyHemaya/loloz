@@ -367,48 +367,76 @@
 
     /* Responsive adjustments */
     @media (max-width: 768px) {
-      h1 {
+    h1 {
         font-size: 1.8rem;
-      }
-      
-      .team-card {
+    }
+    
+    .team-card {
         padding: 1.2rem 1rem;
-      }
-      
-      .team-name {
+    }
+    
+    .team-name {
         font-size: 1.2rem;
-      }
-      
-      .points {
+    }
+    
+    .points {
         font-size: 2rem;
         margin: 0 1rem;
-      }
-      
-      button {
+    }
+    
+    button {
         width: 35px;
         height: 35px;
         font-size: 1rem;
-      }
-      
-      .team-color {
+    }
+    
+    .team-color {
         width: 30px;
         height: 30px;
         margin-right: 1rem;
-      }
+    }
+    }
+
+    @media (max-width: 480px) {
+    .team-card {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 0.5rem;
+        align-items: center;
     }
     
-    @media (max-width: 480px) {
-      .team-card {
-        flex-wrap: wrap;
-      }
-      
-      .points {
+    .team-name {
+        font-size: 1rem;
+        min-width: 80px;
+    }
+    
+    .points {
+        font-size: 1.5rem;
         margin: 0 0.5rem;
-      }
-      
-      .controls {
-        margin-left: auto;
-      }
+    }
+    
+    .controls {
+        display: flex;
+        gap: 0.4rem;
+    }
+    
+    button {
+        width: 30px;
+        height: 30px;
+        font-size: 0.9rem;
+    }
+    
+    .rank {
+        width: 24px;
+        height: 24px;
+        margin-right: 0.5rem;
+    }
+    
+    .team-color {
+        width: 25px;
+        height: 25px;
+        margin-right: 0.5rem;
+    }
     }
 
     /* Dark mode */
